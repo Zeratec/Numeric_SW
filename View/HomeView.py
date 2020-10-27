@@ -1,4 +1,7 @@
 from tkinter import *
+
+from Numeric_SW.Controller import HomeController as hc
+#import Numeric_SW.Controller.HomeController as hc
 #from ..Controller import HomeController
 
 def HomeView():
@@ -9,13 +12,13 @@ def HomeView():
     mainFrame = Frame(mainWindow)
     mainFrame.pack()
 
-    def buttonContent(buttonName):
-        print (buttonName)
+    #def buttonContent(buttonName):
+        #print (buttonName)
 
     listUAP = ["Production", "Logistique", "Qualite"]
 
     for uapName in listUAP:
-        Button(mainFrame, text=uapName, command=lambda buttonName=uapName: buttonContent(buttonName)).pack(side=LEFT)
+        Button(mainFrame, text=uapName, command=lambda buttonName=uapName: hc.buttonContent(buttonName)).pack(side=LEFT)
 
     mainWindow.mainloop()
 
