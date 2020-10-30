@@ -1,6 +1,6 @@
 from tkinter import *
 
-from Numeric_SW.Controller import HomeController as hc
+from Controller import HomeController as hc
 #import Numeric_SW.Controller.HomeController as hc
 #from ..Controller import HomeController
 
@@ -21,6 +21,3 @@ def HomeView():
         Button(mainFrame, text=uapName, command=lambda buttonName=uapName: hc.buttonContent(buttonName)).pack(side=LEFT)
 
     mainWindow.mainloop()
-
-if __name__ == "__main__":
-    HomeView()
