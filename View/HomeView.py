@@ -1,23 +1,18 @@
 from tkinter import *
+from Controller.HomeController import HomeControllerClass as hc
 
-from Controller import HomeController as hc
-#import Numeric_SW.Controller.HomeController as hc
-#from ..Controller import HomeController
+class HomeViewClass(Frame):
 
-def HomeView():
-    mainWindow = Tk()
-    mainWindow.title("Numeric SW")
-    mainWindow.geometry("720x480")
+    def __init__(self, window):
+        Frame.__init__(self, window)
+        self.pack()
 
-    mainFrame = Frame(mainWindow)
-    mainFrame.pack()
 
-    #def buttonContent(buttonName):
-        #print (buttonName)
 
-    listUAP = ["Production", "Logistique", "Qualite"]
 
-    for uapName in listUAP:
-        Button(mainFrame, text=uapName, command=lambda buttonName=uapName: hc.buttonContent(buttonName)).pack(side=LEFT)
+        #Création des boutons
+        listUAP = ["Production", "Logistique", "Qualite"]
 
-    mainWindow.mainloop()
+        for uapName in listUAP:
+            #Button(Frame, text=uapName, command=lambda buttonName=uapName: hc.buttonContent(buttonName)).pack(side=LEFT)
+            Button(self, text=uapName, command=lambda buttonName=uapName: hc.buttonContent(buttonName)).pack(side=LEFT)
