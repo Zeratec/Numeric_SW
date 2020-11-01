@@ -1,6 +1,14 @@
 from tkinter import *
 
-def productview(mainWindow):
+class ProductViewClass(Frame):
 
-    productFrame = Frame(mainWindow)
-    productFrame.pack()
+     def __init__(self, window):
+        Frame.__init__(self, window)
+        self.pack()
+
+
+
+    #def productview(mainWindow):
+
+        #productFrame = Frame(mainWindow)
+        #productFrame.pack()

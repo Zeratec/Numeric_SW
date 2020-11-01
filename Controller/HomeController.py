@@ -1,4 +1,4 @@
-#import View.ProductView as pv
+#from View.ProductView import ProducViewClass as pv
 
 class HomeControllerClass():
 
